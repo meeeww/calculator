@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(9, 9, 121);
+    background: linear-gradient(90deg, rgba(9, 9, 121, 0.7455357142857143) 0%, rgba(0, 212, 255, 1) 100%);
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    width: 5rem;
+    height: auto;
+}
+
+.main div {
+    background: rgb(239,247,255);
+background: linear-gradient(90deg, rgba(239,247,255,0.2) 0%, rgba(239,247,255,0.2) 100%);
+    width: 3rem;
+    height: 3rem;
+}
