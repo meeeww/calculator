@@ -1,91 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-    <link rel="stylesheet" href="estilos.css">
-    <script src="./java.js"></script>
-</head>
+    <link rel="stylesheet" href="estilos.css" />
+    <script src="java.js"></script>
+  </head>
 
-<body>
-    <div class="resultado">5000</div>
+  <body>
+    <div class="resultado">0</div>
     <div class="main">
-        <div class="porcentaje">
-            %
-        </div>
-        <div class="raiz">
-            raiz
-        </div>
-        <div class="alCuadrado">
-            x^2
-        </div>
-        <div class="fraccion">
-            1/x
-        </div>
-        <div class="ce">
-            CE
-        </div>
-        <div class="c">
-            C
-        </div>
-        <div class="borrar">
-            borrar
-        </div>
-        <div class="division">
-            /
-        </div>
-        <div class="siete">
-            7
-        </div>
-        <div class="ocho">
-            8
-        </div>
-        <div class="nueve">
-            9
-        </div>
-        <div class="multiplicacion">
-            x
-        </div>
-        <div class="cuatro">
-            4
-        </div>
-        <div class="cinco">
-            5
-        </div>
-        <div class="seis">
-            6
-        </div>
-        <div class="resta">
-            -
-        </div>
-        <div class="uno">
-            1
-        </div>
-        <div class="dos">
-            2
-        </div>
-        <div class="tres">
-            3
-        </div>
-        <div class="suma">
-            +
-        </div>
-        <div class="cambio">
-            +/-
-        </div>
-        <div class="cero">
-            0
-        </div>
-        <div class="coma">
-            ,
-        </div>
-        <div class="resultado">
-            =
-        </div>
+      <div class="porcentaje">%</div>
+      <div class="raiz">raiz</div>
+      <div class="alCuadrado">x^2</div>
+      <div class="fraccion">1/x</div>
+      <div class="ce">CE</div>
+      <div class="c" onclick="borrarPantalla()">C</div>
+      <div class="borrar" onclick="borrarPantalla()">borrar</div>
+      <div class="division" onclick="operador('dividir')">/</div>
+      <div class="siete" onclick="agregarNumero(7)">7</div>
+      <div class="ocho" onclick="agregarNumero(8)">8</div>
+      <div class="nueve" onclick="agregarNumero(9)">9</div>
+      <div class="multiplicacion" onclick="operador('multiplicar')">x</div>
+      <div class="cuatro" onclick="agregarNumero(4)">4</div>
+      <div class="cinco" onclick="agregarNumero(5)">5</div>
+      <div class="seis" onclick="agregarNumero(6)">6</div>
+      <div class="resta" onclick="operador('restar')">-</div>
+      <div class="uno" onclick="agregarNumero(1)">1</div>
+      <div class="dos" onclick="agregarNumero(2)">2</div>
+      <div class="tres" onclick="agregarNumero(3)">3</div>
+      <div class="suma" onclick="operador('sumar')">+</div>
+      <div class="cambio">+/-</div>
+      <div class="cero" onclick="agregarNumero(0)">0</div>
+      <div class="coma">,</div>
+      <div class="resultado" onclick="calcularResultado()">=</div>
     </div>
-</body>
-
+  </body>
 </html>
