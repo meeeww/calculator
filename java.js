@@ -5,22 +5,29 @@ let contador = 0;
 let operacion;
 let resultado;
 
-function borrarPantalla() {
+function borrarResultados() {
   numero = 0;
   numero2 = 0;
   contador = 0;
   operacion = "";
   resultado = 0;
   array = [];
-  resultado.innerHTML = 0;
-  console.log(resultado.innerHTML);
+}
+
+function borrarPantalla() {
+  numero = 0;
+  numero2 = 0;
+  contador = 0;
+  operacion = "";
+  resultadoHTML = document.querySelector(".resultado");
+  resultadoHTML.innerHTML = 0;
 }
 
 function agregarNumero(numero) {
   resultado = document.querySelector(".resultado");
   array[contador] = numero;
   contador++;
-  resultado.innerHTML = numero;
+  resultado.innerHTML = array;
 }
 
 function operador(p_operacion) {
@@ -40,22 +47,22 @@ function calcularResultado() {
     case "sumar":
       let suma = numero + (numero2 = convertirNumero());
       resultado.innerHTML = suma;
-      borrarPantalla();
+      borrarResultados();
       break;
     case "restar":
       let resta = numero - (numero2 = convertirNumero());
       resultado.innerHTML = resta;
-      borrarPantalla();
+      borrarResultados();
       break;
     case "dividir":
       let division = numero / (numero2 = convertirNumero());
       resultado.innerHTML = division;
-      borrarPantalla();
+      borrarResultados();
       break;
     case "multiplicar":
       let multiplicacion = numero * (numero2 = convertirNumero());
       resultado.innerHTML = multiplicacion;
-      borrarPantalla();
+      borrarResultados();
       break;
     default:
       break;
